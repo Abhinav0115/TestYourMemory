@@ -21,7 +21,10 @@ function flip() {
 }
 
 function Check() {
-  if (firstCard.dataset.image === secondCard.dataset.image) {
+  if (
+    firstCard.dataset.image === secondCard.dataset.image &&
+    firstCard.dataset.name != secondCard.dataset.name
+  ) {
     countSuccess += 1;
     console.log("Success: " + countSuccess);
     success();
